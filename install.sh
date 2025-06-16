@@ -69,13 +69,6 @@ case "$ARCH_RAW" in
 esac
 BIN_URL="https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/v0.0.1/download/${BIN_FILE}"
 
-## ----- Устанавливаем зависимости ----------------------------------------
-apt-get update
-DEBIAN_FRONTEND=noninteractive \
-apt-get install -y --no-install-recommends \
-  openvswitch-switch ovn-common ovn-central \
-  curl
-
 ## ----- Скачиваем бинарь --------------------------------------------------
 echo "⬇️  Скачиваем ${BIN_URL}"
 curl -fsSL "$BIN_URL" -o "$BIN_PATH"
