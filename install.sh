@@ -85,8 +85,7 @@ chmod +x "$BIN_PATH"
 cat >"/etc/systemd/system/${SERVICE_NAME}" <<EOF
 [Unit]
 Description=My-bin service (auto-installed)
-After=network.target ovn-central.service
-Requires=ovn-central.service
+After=network.target
 
 [Service]
 Type=simple
