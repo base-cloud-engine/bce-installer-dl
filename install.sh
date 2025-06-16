@@ -67,7 +67,7 @@ case "$ARCH_RAW" in
   arm64|aarch64) BIN_FILE="${BIN_BASENAME}-linux-arm64" ;;
   *)  echo "Неподдерживаемая архитектура: $ARCH_RAW" >&2; exit 1 ;;
 esac
-BIN_URL="https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/v0.0.1/download/${BIN_FILE}"
+BIN_URL="https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/download/v0.0.1/${BIN_FILE}"
 
 ## ----- Скачиваем бинарь --------------------------------------------------
 echo "⬇️  Скачиваем ${BIN_URL}"
