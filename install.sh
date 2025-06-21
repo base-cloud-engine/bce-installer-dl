@@ -8,6 +8,7 @@ set -euo pipefail
 GITHUB_OWNER="base-cloud-engine"           # ← замените
 GITHUB_REPO="bce-installer-dl"             # ← замените
 BIN_BASENAME="bce-installer"             # ← замените (без -linux-amd64)
+BCE_INSTALLER_VERSION="v0.0.2"
 
 SERVICE_NAME="bce-installer.service"
 BIN_PATH="/usr/local/bin/${BIN_BASENAME}"
@@ -67,7 +68,7 @@ case "$ARCH_RAW" in
   arm64|aarch64) BIN_FILE="${BIN_BASENAME}-linux-arm64" ;;
   *)  echo "Неподдерживаемая архитектура: $ARCH_RAW" >&2; exit 1 ;;
 esac
-BIN_URL="https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/download/v0.0.1/${BIN_FILE}"
+BIN_URL="https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/download/${BCE_INSTALLER_VERSION}/${BIN_FILE}"
 
 ## ----- Скачиваем бинарь --------------------------------------------------
 echo "⬇️  Скачиваем ${BIN_URL}"
