@@ -8,7 +8,7 @@ set -euo pipefail
 GITHUB_OWNER="base-cloud-engine"           # ← замените
 GITHUB_REPO="bce-installer-dl"             # ← замените
 BIN_BASENAME="bce-installer"             # ← замените (без -linux-amd64)
-BCE_INSTALLER_VERSION="v0.0.2"
+BCE_INSTALLER_VERSION="v0.0.3"
 
 SERVICE_NAME="bce-installer.service"
 BIN_PATH="/usr/local/bin/${BIN_BASENAME}"
